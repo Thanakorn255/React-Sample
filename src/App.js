@@ -4,11 +4,14 @@ import { Component } from "react/cjs/react.production.min";
 import User from "./user/User";
 
 class App extends Component {
+  state = {
+    name:'Ton'
+  };
+
   render() {
-    const name = "Hello Ton";
     return (
       <div>
-        {name}
+        I AM {this.state.name}
         <User />
       </div>
     );
