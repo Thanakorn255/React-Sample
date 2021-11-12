@@ -8,11 +8,17 @@ class App extends Component {
     name:'Ton'
   };
 
+  onNameChange = name => {
+    this.setState({ name: name });
+  };
+  
   render() {
+    const { name } = this.state;
+
     return (
       <div>
-        I AM {this.state.name}
-        <User />
+        I AM {name}
+        <User name = {name} onNameChange = {this.onNameChange}/>
       </div>
     );
   }
